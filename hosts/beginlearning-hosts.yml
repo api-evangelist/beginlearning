@@ -1,0 +1,59 @@
+generated: '2026-09-27'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 3
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - support
+  - website
+hosts:
+- host: api.beginlearning.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: beginlearning.com
+  role: api
+  relation: own
+- host: support.beginlearning.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Support
+  serves:
+  - cdn
+  vendor: cloudfront
+  registrable_domain: beginlearning.com
+  role: support
+  relation: own
+- host: www.beginlearning.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Login
+  - Website
+  - AboutUs
+  - TermsOfService
+  - PrivacyPolicy
+  serves:
+  - docs
+  - cdn
+  vendor: fastly
+  registrable_domain: beginlearning.com
+  role: website
+  relation: own

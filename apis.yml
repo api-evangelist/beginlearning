@@ -1,23 +1,82 @@
 aid: beginlearning
+
 name: Beginlearning
-description: 'Beginlearning is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://static.beginlearning.com/deployedassets/63b70baf/static/img/begin/begin-logo.svg
+
+description: Beginlearning provides award‑winning learning products for children ages 2‑10, offering digital apps, hands‑on kits, and educational
+  resources. Their mission is to give every child the best start to achieving their fullest potential through play‑based learning, supporting
+  parents and educators with tools and content that foster curiosity and growth.
+
 url: https://raw.githubusercontent.com/api-evangelist/beginlearning/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
-- Company
-apis: []
+- Education
+- Children
+- Learning
+- DigitalApps
+- Toys
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/beginlearning-llms.txt
+- type: Hosts
+  url: hosts/beginlearning-hosts.yml
+- type: Vendors
+  url: vendors/beginlearning-vendors.yml
+- type: Login
+  url: https://www.beginlearning.com/signin
+- type: DomainSecurity
+  url: security/beginlearning-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/beginlearning
+  url: https://www.beginlearning.com
+- type: AboutUs
+  url: https://www.beginlearning.com/about-us
+- type: Support
+  url: https://support.beginlearning.com
+- type: TermsOfService
+  url: https://www.beginlearning.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.beginlearning.com/privacy-policy
+
+apis:
+- name: Beginlearning API
+  description: API for Beginlearning services
+  humanURL: https://www.beginlearning.com
+  aid: beginlearning:beginlearning-api
+
+x-coverage:
+  state: gated
+  reason: partner-login
+  detail: OpenAPI spec endpoints on api.beginlearning.com return 403 Forbidden, indicating access is restricted.
+  evidence:
+  - url: https://api.beginlearning.com/openapi.json
+    status: 403
+  - url: https://api.beginlearning.com/openapi.yaml
+    status: 403
+  checked: '2026-09-27'
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
