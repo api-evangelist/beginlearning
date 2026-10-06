@@ -21,7 +21,7 @@ specificationVersion: '0.20'
 
 created: '2026-09-27'
 
-modified: '2026-09-27'
+modified: '2026-10-06'
 
 tags:
 - Education
@@ -37,6 +37,10 @@ maintainers:
   email: info@apis.io
 
 common:
+- url: https://www.beginlearning.com/parent-resources
+  type: Blog
+- url: https://www.beginlearning.com/parent-resources/feed/
+  type: BlogRSS
 - type: LLMsTxt
   url: llms/beginlearning-llms.txt
 - type: Hosts
